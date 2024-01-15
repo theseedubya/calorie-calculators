@@ -1,4 +1,4 @@
-const asdaPizzaIngredients = {
+export const asdaPizzaIngredients = {
   "bases": {
       "small": {
           "thin stonebaked": 282
@@ -88,7 +88,3 @@ const asdaPizzaIngredients = {
       }
   }
 };
-
-module.exports = {
-    asdaPizzaIngredients
-}
