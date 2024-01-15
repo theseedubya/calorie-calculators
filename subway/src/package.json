@@ -1,0 +1,11 @@
+{
+  "name": "subway",
+  "version": "1.0.0",
+  "description": "Calorie calculator for Subway sandwiches",
+  "main": "app.js",
+  "scripts": {
+    "test": "c8 mocha tests/"
+  },
+  "author": "theseedubya",
+  "license": "ISC"
+}

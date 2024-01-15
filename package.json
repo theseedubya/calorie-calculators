@@ -9,7 +9,8 @@
   "author": "theseedubya",
   "license": "ISC",
   "workspaces": [
-    "asdaPizza/src"
+    "asdaPizza/src",
+    "subway/src"
   ],
   "devDependencies": {
     "c8": "^9.1.0",
