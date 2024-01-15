@@ -1,0 +1,20 @@
+{
+  "name": "calorie-calculators",
+  "version": "1.0.0",
+  "description": "Collection of calorie calulators to assist calorie counting takeaways",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test --workspaces --if-present"
+  },
+  "author": "theseedubya",
+  "license": "ISC",
+  "workspaces": [
+    "asdaPizza/src"
+  ],
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "chai": "^5.0.0",
+    "ci": "^2.3.0",
+    "mocha": "^10.2.0"
+  }
+}
