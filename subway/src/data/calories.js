@@ -1,4 +1,4 @@
-const breadCalories = {
+export const breadCalories = {
     "9-Grain Wheat Bread": 165,
     "Gluten-Free Bread": 285,
     "Hearty Italian Bread": 186,
@@ -8,7 +8,7 @@ const breadCalories = {
     "Plain Tortilla Wrap": 214.5
   }
   
-const proteinCalories = {
+export const proteinCalories = {
     "Big Beef Patty": 140,
     "Lincolnshire Sausage Patty": 121.5,
     "Chicken Tikka": 89,
@@ -39,7 +39,7 @@ const proteinCalories = {
     "HALAL Turkey Sausage Patty": 71
   };
 
-const cheeseCalories = {
+export const cheeseCalories = {
     "American-style Cheese": 42,
     "Monterey Jack Cheddar Slices": 38,
     "Mozzarella": 74,
@@ -49,7 +49,7 @@ const cheeseCalories = {
     "Vegan CheeZe": 59
   }
 
-const vegetableCalories = {
+export const vegetableCalories = {
     "Cucumbers": 3,
     "Carrots": 3,
     "Jalapenos": 1,
@@ -62,7 +62,7 @@ const vegetableCalories = {
     "Tomatoes": 5
   }
 
-const sauceCalories = {
+export const sauceCalories = {
     "Caramelised Red Onion in Balsamic Vinegar": 9,
     "Chipotle Southwest sauce": 58,
     "Creamy Caesar sauce": 7,
@@ -81,13 +81,13 @@ const sauceCalories = {
     "Tomato Ketchup": 14
   }
 
-const toppingCalories = {
+export const toppingCalories = {
     "Chili Flakes": 4,
     "Crispy Onions": 41,
     "Multi-Seed Mix": 58
   }
 
-const dessertCalories = {
+export const dessertCalories = {
     "Cadbury's® Caramel Muffin": 480,
     "Chocolate Chunk Cookie": 214,
     "Chocolate Donut": 262,
@@ -99,7 +99,7 @@ const dessertCalories = {
     "White Macadamia Nut Cookie": 215
   }
 
-  const subwayCalories = {
+export const subwayCalories = {
     "9-Grain Wheat Bread": 165,
     "Gluten-Free Bread": 285,
     "Hearty Italian Bread": 186,

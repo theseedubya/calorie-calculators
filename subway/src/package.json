@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Calorie calculator for Subway sandwiches",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "c8 mocha tests/"
   },

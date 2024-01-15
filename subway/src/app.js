@@ -1,10 +1,10 @@
-const subwayCalories = require('./calorieData/calories')
+import { subwayCalories } from './data/calories.js'
 
-function calculateSubwayUKCalories(calorieData, ingredientsArray, isFootlong) {
+export const calculateSubwayUKCalories = (subwayCalories, ingredientsArray, isFootlong) => {
     let sandwichCalories = 0
     for (let i = 0; i < ingredientsArray.length; i++) {
         let ingredient = ingredientsArray[i]
-        sandwichCalories = sandwichCalories + calorieData[ingredient]
+        sandwichCalories = sandwichCalories + subwayCalories[ingredient]
     }
     if (isFootlong) {
         return sandwichCalories * 2;
@@ -12,16 +12,3 @@ function calculateSubwayUKCalories(calorieData, ingredientsArray, isFootlong) {
         return sandwichCalories
     }
 };
-    
-const meatball =
-    [
-        "Italian White Bread",
-        "Pork & Beef Meatballs (in marinara sauce)",
-        "American-style Cheese",
-        "Lettuce",
-        "Tomatoes",
-        "Pickles"
-    ]
-
-console.log("kimMeatball: ",calculateSandwichCalories(subwayCalories, meatball, true))
-
