@@ -13,16 +13,25 @@ function generateForm(data) {
         
         for(let option in data[category]){
             console.log("OPTION >>>",option)
-            const label = document.createElement('label')
-            label.textContent = `${option}\n`
+            const sizeLabel = document.createElement('label')
+            sizeLabel.textContent = `${option}\n`
+            fieldset.appendChild(sizeLabel);
             
-            // const input = document.createElement('input');
-            // input.type = 'radio';
-            // input.name = `${option}\n`;
-            // input.value = option;
-
-            //label.prepend(input);
-            fieldset.appendChild(label);
+            for(let selection in data[category][option]){
+                const selectionLabel = document.createElement('label')
+                selectionLabel.textContent = `\n${selection}\n`
+                selectionLabel.setAttribute("class","selectionLabel")
+                
+                 const input = document.createElement('input');
+                 input.type = 'radio';
+                 input.name = `${selection}\n`;
+                 input.value = selection;
+                 input.setAttribute("class","selectionInput")
+    
+                selectionLabel.append(input);
+                fieldset.appendChild(selectionLabel);
+            }
+            fieldset.appendChild(document.createElement('br'));
         }
         form.appendChild(fieldset);
     }
