@@ -95,3 +95,27 @@ button:hover {
 #result p {
     margin: 0;
 }
+
+/* Additional styling for toppings section */
+fieldset ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates responsive grid */
+    gap: 10px; /* Adds spacing between items */
+    padding-left: 0;
+}
+
+fieldset ul li {
+    margin-bottom: 0;
+}
+
+label {
+    display: flex;
+    align-items: center; /* Aligns checkboxes with text */
+    font-size: 1rem;
+    color: #8b7765;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #a68a64; /* Tan tone for checkboxes */
+}
