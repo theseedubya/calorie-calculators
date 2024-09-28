@@ -1,48 +1,29 @@
-import { asdaPizzaIngredients } from "./asdaPizza/src/data/calories.js";
+import {asdaPizzaIngredients} from "/asdaPizza/src/data/calories.js";
 
-function generateForm(data) {
-    const form = document.getElementById('form');
+function formSubmit(event) {
+    event.preventDefault();
 
-    for (let category in data) {
-        console.log("CATEGORY >>>", category)
-        const fieldset = document.createElement('fieldset');
-        const legend = document.createElement('legend');
-        legend.textContent = category;
-        fieldset.appendChild(legend);
+    const resultArea = document.getElementById("result")
 
+    const formData = new FormData(this);
+    const size = formData.getAll("size")
+    const base = formData.getAll("base")
+    const sauce = formData.getAll("sauce")
+    const toppings = formData.getAll("toppings")
 
-        for (let size in data[category]) {
-            if (Object.keys(data[category][size]).length > 0) {
-                console.log("OPTION >>>", size)
-                const sizeLabel = document.createElement('label')
-                sizeLabel.textContent = `${size}\n`
-                sizeLabel.setAttribute("class","sizeLabel")
-                fieldset.appendChild(sizeLabel);
-
-                for (let selection in data[category][size]) {
-                    const selectionLabel = document.createElement('label')
-                    selectionLabel.textContent = `${selection}`
-                    selectionLabel.setAttribute("class", "selectionLabel")
-
-                    const input = document.createElement('input');
-                    input.type = 'radio';
-                    input.name = `${selection}`;
-                    input.value = selection;
-                    input.setAttribute("class", "selectionInput")
-
-                    selectionLabel.append(input);
-                    fieldset.appendChild(selectionLabel);
-                }
-
-            }
-            fieldset.appendChild(document.createElement('br'));
-        }
-        form.appendChild(fieldset);
-    }
-
+    let calories = 0
+    calories += asdaPizzaIngredients[size].bases[base]
+    calories += asdaPizzaIngredients[size].sauces[sauce]
+    toppings.forEach((topping) => {
+       calories+=  asdaPizzaIngredients[size].toppings[topping]
+    })
+    console.log(calories)
+    const result = document.createElement("h4")
+    result.textContent = `Calories: ${calories}`
+    resultArea.appendChild(result)
+    resultArea.style.setProperty("display","block")
+    return true;
 }
 
-// Generate the form on page load
-document.addEventListener('DOMContentLoaded', function () {
-    generateForm(asdaPizzaIngredients);
-});
+const form = document.getElementById("form");
+form.addEventListener("submit", formSubmit);
